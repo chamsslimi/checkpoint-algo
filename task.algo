@@ -1,0 +1,24 @@
+ALGORITHM sentence
+VAR
+var nb_c,nb_w,nb_vowels:integer;
+var c:char; 
+var word:string;  
+BEGIN
+    read(word);
+    
+    nb_c:=0;
+    nb_w:=1;
+    nb_vowels:=0;
+    WHILE (c<>".") DO
+    nb_c:=nb_c+1;
+    IF (c in ["a","e","i","o","u","A","E","I","O","U"]) THEN
+    nb_vowels:=nb_vowels+1;
+    END IF
+    IF(c="")THEN
+    nb_w:=nb_w +1;
+    END IF
+    END WHILE
+    write(nb_c);
+    write(nb_w);
+    write(nb_vowels);
+END
